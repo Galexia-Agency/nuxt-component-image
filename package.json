@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-component-image",
+  "version": "1.0.0",
+  "description": "A Nuxt Image Component to allow for multiple file types and sensible defaults to optimise loading",
+  "main": "index.vue",
+  "scripts": {
+    "lint:scripts": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "fix:scripts": "eslint --ext .js,.vue --ignore-path .gitignore . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galexia-Agency/nuxt-component-image.git"
+  },
+  "author": "Galexia Creative Agency Ltd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Galexia-Agency/nuxt-component-image/issues"
+  },
+  "homepage": "https://github.com/Galexia-Agency/nuxt-component-image#readme",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-plugin-nuxt": "^4.0.0"
+  },
+  "engines": {
+    "node": "^16.14.2",
+    "yarn": "^1.10"
+  },
+  "packageManager": "yarn@1.22.19"
+}

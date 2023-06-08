@@ -8,7 +8,7 @@ We assume you have a Nuxt project.
 You'll need to install [Nuxt Optimized Images](https://www.npmjs.com/package/@aceforth/nuxt-optimized-images) first.
 
 ```bash
-yarn add --dev @aceforth/nuxt-optimized-images imagemin-svgo responsive-loader sharp
+yarn add --dev @aceforth/nuxt-optimized-images responsive-loader sharp
 ```
 
 ```js
@@ -19,36 +19,7 @@ modules: [
 ],
 optimizedImages: {
   optimizeImages: true,
-  optimizeImagesInDev: true,
-  webp: {
-    quality: 70
-  },
-  svgo: {
-    plugins: [
-        {
-          name: 'preset-default',
-          params: {
-            overrides: {
-              cleanupIDs: {
-                minify: false
-              }
-            }
-          }
-        },
-        {
-          name: 'reusePaths',
-          active: true
-        },
-        {
-          name: 'removeOffCanvasPaths',
-          active: true
-        },
-        {
-          name: 'removeScriptElement',
-          active: true
-        }
-      ]
-  }
+  optimizeImagesInDev: true
 },
 ...
 ```

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-component-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Nuxt Image Component to allow for multiple file types and sensible defaults to optimise loading",
   "main": "index.vue",
   "scripts": {

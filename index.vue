@@ -1,9 +1,8 @@
 <template>
   <picture>
     <source type="image/avif" :srcset="avif" :width="width" :height="height">
-    <source type="image/webp" :srcset="webp" :width="width" :height="height">
     <img
-      :src="src"
+      :src="webp"
       :decoding="decoding"
       :loading="loading"
       :alt="alt"
@@ -18,10 +17,6 @@
 export default {
   name: 'Galexia_NuxtComponent_Image',
   props: {
-    src: {
-      type: Object,
-      required: true
-    },
     webp: {
       type: Object,
       required: true

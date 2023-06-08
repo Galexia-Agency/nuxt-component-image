@@ -8,7 +8,7 @@ We assume you have a Nuxt project.
 You'll need to install [Nuxt Optimized Images](https://www.npmjs.com/package/@aceforth/nuxt-optimized-images) first.
 
 ```bash
-yarn add --dev @aceforth/nuxt-optimized-images imagemin-mozjpeg imagemin-pngquant imagemin-svgo responsive-loader sharp
+yarn add --dev @aceforth/nuxt-optimized-images imagemin-svgo responsive-loader sharp
 ```
 
 ```js
@@ -20,21 +20,34 @@ modules: [
 optimizedImages: {
   optimizeImages: true,
   optimizeImagesInDev: true,
-  mozjpeg: {
-    quality: 70
-  },
-  pngquant: {
-    stripe: true
-  },
   webp: {
     quality: 70
   },
   svgo: {
     plugins: [
-      { reusePaths: true },
-      { removeOffCanvasPaths: true },
-      { removeScriptElement: true }
-    ]
+        {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              cleanupIDs: {
+                minify: false
+              }
+            }
+          }
+        },
+        {
+          name: 'reusePaths',
+          active: true
+        },
+        {
+          name: 'removeOffCanvasPaths',
+          active: true
+        },
+        {
+          name: 'removeScriptElement',
+          active: true
+        }
+      ]
   }
 },
 ...
@@ -71,7 +84,6 @@ plugins: [
   class="page-header__image"
   :avif="require('~/assets/img/joe-bailey.jpg?format=avif&resize&size=150')"
   :webp="require('~/assets/img/joe-bailey.jpg?format=webp&resize&size=150')"
-  :src="require('~/assets/img/joe-bailey.jpg?size=150')"
   width="150"
   loading="eager"
   fetchpriority="high"

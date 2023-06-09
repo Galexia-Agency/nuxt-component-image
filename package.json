@@ -27,6 +27,8 @@
   },
   "packageManager": "yarn@1.22.19",
   "peerDependencies": {
-    "@aceforth/nuxt-optimized-images": "^1.4.0"
+    "@aceforth/nuxt-optimized-images": "^1.4.0",
+    "responsive-loader": "^2.3.0",
+    "sharp": "^0.32.1"
   }
 }
